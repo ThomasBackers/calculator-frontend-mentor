@@ -85,9 +85,15 @@ header .themes-menu__nav__themes-list {
   justify-content: space-between;
   margin: 0 auto;
   width: 3.2rem;
+  /*everything is well positioned
+  but not the themes list so let's
+  abuse of the position trick*/
+  position: relative;
+  bottom: 0.3rem;
+  left: 0.05rem;
 }
 header .themes-menu__nav__themes-list__theme-id {
-  font-size: 0.76rem;
+  font-size: 0.75rem;
 }
 header .themes-menu__nav__toggler {
   background-color: #232c43;

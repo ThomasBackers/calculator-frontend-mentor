@@ -21,8 +21,14 @@ header {
                 justify-content: space-between;
                 margin: 0 auto;
                 width: 3.2rem;
+                /*everything is well positioned
+                but not the themes list so let's
+                abuse of the position trick*/
+                position: relative;
+                bottom: 0.3rem;
+                left: 0.05rem;
                 &__theme-id {
-                    font-size: 0.76rem;
+                    font-size: 0.75rem;
                 }
             }
             &__toggler {
@@ -32,6 +38,7 @@ header {
                 width: 4.45rem;
                 position: relative;
                 &::before {
+                    //Here is the toggler circle
                     position: absolute;
                     content: "";
                     height: 1rem;
