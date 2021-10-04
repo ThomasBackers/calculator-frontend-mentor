@@ -94,6 +94,7 @@ header .themes-menu__nav__themes-list {
 }
 header .themes-menu__nav__themes-list__theme-id {
   font-size: 0.75rem;
+  cursor: pointer;
 }
 header .themes-menu__nav__toggler {
   background-color: #232c43;
@@ -101,6 +102,11 @@ header .themes-menu__nav__toggler {
   height: 1.65rem;
   width: 4.45rem;
   position: relative;
+}
+header .themes-menu__nav__toggler__step {
+  height: 100%;
+  width: auto;
+  cursor: pointer;
 }
 header .themes-menu__nav__toggler::before {
   position: absolute;
@@ -111,14 +117,16 @@ header .themes-menu__nav__toggler::before {
   border-radius: 50%;
   top: 0.35rem;
   left: 0.35rem;
+  cursor: pointer;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6rem;
   text-align: center;
+  color: white;
 }
 .attribution a {
-  color: #3e52a3;
+  color: #d03f2f;
   text-decoration: none;
 }
 

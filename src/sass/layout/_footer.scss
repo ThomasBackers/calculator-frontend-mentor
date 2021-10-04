@@ -1,8 +1,9 @@
 .attribution {
-    font-size: 11px;
+    font-size: 0.6rem;
     text-align: center;
+    color: $text-color-2;
     a {
-        color: hsl(228, 45%, 44%);
+        color: $key-equ-background;
         text-decoration: none;
     }
 }

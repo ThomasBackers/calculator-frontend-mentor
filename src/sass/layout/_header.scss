@@ -29,6 +29,7 @@ header {
                 left: 0.05rem;
                 &__theme-id {
                     font-size: 0.75rem;
+                    cursor: pointer;
                 }
             }
             &__toggler {
@@ -37,6 +38,11 @@ header {
                 height: 1.65rem;
                 width: 4.45rem;
                 position: relative;
+                &__step {
+                    height: 100%;
+                    width: auto;
+                    cursor: pointer;
+                }
                 &::before {
                     //Here is the toggler circle
                     position: absolute;
@@ -47,6 +53,7 @@ header {
                     border-radius: 50%;
                     top: 0.35rem;
                     left: 0.35rem;
+                    cursor: pointer;
                 }
             }
         }
