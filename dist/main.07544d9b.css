@@ -61,6 +61,10 @@ body .body-contents {
   padding: 2.1rem 1.5rem;
 }
 
+button {
+  display: block;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -132,18 +136,54 @@ header .themes-menu__nav__toggler::before {
 .calculator {
   padding-top: 2rem;
 }
+.calculator__screen, .calculator__keyboard {
+  border-radius: 10px;
+}
 .calculator__screen {
   display: flex;
   justify-content: flex-end;
   height: 5.5rem;
   background-color: #182034;
-  border-radius: 10px;
   box-sizing: border-box;
 }
 .calculator__screen output {
   color: white;
   font-size: 2rem;
   margin: auto 1.5rem;
+}
+.calculator__keyboard {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #232c43;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.calculator__keyboard__key-num, .calculator__keyboard__key-del, .calculator__keyboard__key-equ {
+  font-family: "Spartan", sans-serif;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 5px;
+}
+.calculator__keyboard__key-del, .calculator__keyboard__key-equ {
+  width: 47.5%;
+  font-size: 1rem;
+  color: white;
+}
+.calculator__keyboard__key-num, .calculator__keyboard__key-del:nth-child(4) {
+  width: 21.5%;
+}
+.calculator__keyboard__key-num {
+  font-size: 1.8rem;
+  background-color: #eae3dc;
+  color: #444b5a;
+}
+.calculator__keyboard__key-del {
+  text-transform: uppercase;
+  background-color: #637097;
+}
+.calculator__keyboard__key-equ {
+  background-color: #d03f2f;
 }
 
 .attribution {

@@ -1,16 +1,52 @@
 .calculator {
     padding-top: 2rem;
+    &__screen, &__keyboard {
+        border-radius: 10px;
+    }
     &__screen {
         display: flex;
         justify-content: flex-end;
         height: 5.5rem;
         background-color: $screen-background;
-        border-radius: 10px;
         box-sizing: border-box;
         output {
             color: $text-color-2;
             font-size: 2rem;
             margin: auto 1.5rem;
+        }
+    }
+    &__keyboard {
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+        background-color: $toggle-background;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__key-num, &__key-del, &__key-equ {
+            font-family: $main-font;
+            padding: 1rem 0;
+            border: none;
+            border-radius: 5px;
+        }
+        &__key-del, &__key-equ {
+            width: 47.5%;
+            font-size: 1rem;
+            color: $text-color-2;
+        }
+        &__key-num, &__key-del:nth-child(4) {
+            width: 21.5%;
+        }
+        &__key-num {
+            font-size: 1.8rem;
+            background-color: $key-num-background;
+            color: $text-color-1;
+        }
+        &__key-del {
+            text-transform: uppercase;
+            background-color: $key-del-background;
+        }
+        &__key-equ {
+            background-color: $key-equ-background;
         }
     }
 }
