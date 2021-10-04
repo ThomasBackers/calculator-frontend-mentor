@@ -58,7 +58,7 @@ body {
   font-family: "Spartan", sans-serif;
 }
 body .body-contents {
-  padding: 2.1rem 1.5rem;
+  padding: 2.1rem 1.5rem 0 1.5rem;
 }
 
 button {
@@ -164,6 +164,8 @@ header .themes-menu__nav__toggler::before {
   padding: 1rem 0;
   border: none;
   border-radius: 5px;
+  height: 4rem;
+  cursor: pointer;
 }
 .calculator__keyboard__key-del, .calculator__keyboard__key-equ {
   width: 47.5%;
@@ -172,28 +174,22 @@ header .themes-menu__nav__toggler::before {
 }
 .calculator__keyboard__key-num, .calculator__keyboard__key-del:nth-child(4) {
   width: 21.5%;
+  margin-bottom: 0.81rem;
 }
 .calculator__keyboard__key-num {
   font-size: 1.8rem;
   background-color: #eae3dc;
   color: #444b5a;
+  box-shadow: inset 0px -4px 0px 0px #b4a597;
 }
 .calculator__keyboard__key-del {
   text-transform: uppercase;
   background-color: #637097;
+  box-shadow: inset 0px -4px 0px 0px #404e72;
 }
 .calculator__keyboard__key-equ {
   background-color: #d03f2f;
-}
-
-.attribution {
-  font-size: 0.6rem;
-  text-align: center;
-  color: white;
-}
-.attribution a {
-  color: #d03f2f;
-  text-decoration: none;
+  box-shadow: inset 0px -4px 0px 0px #93261a;
 }
 
 /*# sourceMappingURL=/main.07544d9b.css.map */

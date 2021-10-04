@@ -27,6 +27,8 @@
             padding: 1rem 0;
             border: none;
             border-radius: 5px;
+            height: 4rem;
+            cursor: pointer;
         }
         &__key-del, &__key-equ {
             width: 47.5%;
@@ -35,18 +37,22 @@
         }
         &__key-num, &__key-del:nth-child(4) {
             width: 21.5%;
+            margin-bottom: 0.81rem;
         }
         &__key-num {
             font-size: 1.8rem;
             background-color: $key-num-background;
             color: $text-color-1;
+            box-shadow: inset 0px -4px 0px 0px $key-num-shadow;
         }
         &__key-del {
             text-transform: uppercase;
             background-color: $key-del-background;
+            box-shadow: inset 0px -4px 0px 0px $key-del-shadow;
         }
         &__key-equ {
             background-color: $key-equ-background;
+            box-shadow: inset 0px -4px 0px 0px $key-equ-shadow;
         }
     }
 }
