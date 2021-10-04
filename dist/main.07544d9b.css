@@ -101,12 +101,21 @@ header .themes-menu__nav__toggler {
   border-radius: 20px;
   height: 1.65rem;
   width: 4.45rem;
+  display: flex;
   position: relative;
 }
 header .themes-menu__nav__toggler__step {
   height: 100%;
-  width: auto;
+  width: 33.3%;
   cursor: pointer;
+}
+header .themes-menu__nav__toggler__step:nth-child(1) {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+header .themes-menu__nav__toggler__step:nth-child(3) {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 header .themes-menu__nav__toggler::before {
   position: absolute;
