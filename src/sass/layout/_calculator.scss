@@ -1,0 +1,16 @@
+.calculator {
+    padding-top: 2rem;
+    &__screen {
+        display: flex;
+        justify-content: flex-end;
+        height: 5.5rem;
+        background-color: $screen-background;
+        border-radius: 10px;
+        box-sizing: border-box;
+        output {
+            color: $text-color-2;
+            font-size: 2rem;
+            margin: auto 1.5rem;
+        }
+    }
+}

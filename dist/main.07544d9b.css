@@ -129,6 +129,23 @@ header .themes-menu__nav__toggler::before {
   cursor: pointer;
 }
 
+.calculator {
+  padding-top: 2rem;
+}
+.calculator__screen {
+  display: flex;
+  justify-content: flex-end;
+  height: 5.5rem;
+  background-color: #182034;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.calculator__screen output {
+  color: white;
+  font-size: 2rem;
+  margin: auto 1.5rem;
+}
+
 .attribution {
   font-size: 0.6rem;
   text-align: center;
