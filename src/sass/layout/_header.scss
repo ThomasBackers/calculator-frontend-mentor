@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    color: $text-color-2;
+    .calc-heading {
+        font-size: 2rem;
+    }
+    .themes-menu {
+        display: flex;
+        &__heading {
+            text-transform: uppercase;
+        }
+        &__nav {
+            &__themes-list {
+                display: flex;
+                justify-content: space-around;
+                &__theme-id {
+                    font-size: 0.754rem;
+                }
+            }
+            &__toggler {
+                background-color: $toggle-background;
+                border-radius: 20px;
+                height: 1.65rem;
+                width: 4.4rem;
+            }
+        }
+    }
+}

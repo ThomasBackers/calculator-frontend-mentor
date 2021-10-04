@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,13 +53,40 @@ table {
   border-spacing: 0;
 }
 
-a {
-  display: inline-block;
-  text-decoration: none;
-}
-
 body {
   background-color: #3a4764;
+  font-family: "Spartan", sans-serif;
+}
+body .body-contents {
+  padding: 2.1rem 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+header .calc-heading {
+  font-size: 2rem;
+}
+header .themes-menu {
+  display: flex;
+}
+header .themes-menu__heading {
+  text-transform: uppercase;
+}
+header .themes-menu__nav__themes-list {
+  display: flex;
+  justify-content: space-around;
+}
+header .themes-menu__nav__themes-list__theme-id {
+  font-size: 0.754rem;
+}
+header .themes-menu__nav__toggler {
+  background-color: #232c43;
+  border-radius: 20px;
+  height: 1.65rem;
+  width: 4.4rem;
 }
 
 .attribution {
@@ -67,6 +95,7 @@ body {
 }
 .attribution a {
   color: #3e52a3;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=/main.07544d9b.css.map */

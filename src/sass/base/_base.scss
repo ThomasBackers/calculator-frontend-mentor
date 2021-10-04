@@ -1,8 +1,7 @@
-a {
-    display: inline-block;
-    text-decoration: none;
-}
-
 body {
-    background-color: $main-background;
+    background-color: $body-background;
+    font-family: $main-font;
+    .body-contents {
+        padding: 2.1rem 1.5rem;
+    }
 }

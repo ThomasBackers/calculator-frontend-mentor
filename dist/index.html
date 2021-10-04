@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/725bb5d8498ab7e1202a4cad07544d9b.css" type="text/css" rel="stylesheet">
+        <link href="/main.07544d9b.css" type="text/css" rel="stylesheet">
         <title>Frontend Mentor | Calculator app</title>
     <script src="/main.07544d9b.js"></script></head>
     <body>
@@ -13,26 +13,26 @@
                 <h1 class="calc-heading">calc</h1>
                 <div class="themes-menu">
                     <h2 class="themes-menu__heading">theme</h2>
-                    <nav class="themes-menu__nav-bar">
-                        <ul class="themes-menu__nav__theme-list">
-                            <li class="themes-menu__nav__themes-list__theme">1</li>
-                            <li class="themes-menu__nav__themes-list__theme">2</li>
-                            <li class="themes-menu__nav__themes-list__theme">3</li>
+                    <nav class="themes-menu__nav">
+                        <ul class="themes-menu__nav__themes-list">
+                            <li class="themes-menu__nav__themes-list__theme-id">1</li>
+                            <li class="themes-menu__nav__themes-list__theme-id">2</li>
+                            <li class="themes-menu__nav__themes-list__theme-id">3</li>
                         </ul>
-                        <ul class="themes-menus__nav__toggler">
-                            <li class="themes-menus__nav__toggler__step"></li>
-                            <li class="themes-menus__nav__toggler__step"></li>
-                            <li class="themes-menus__nav__toggler__step"></li>
+                        <ul class="themes-menu__nav__toggler">
+                            <li class="themes-menu__nav__toggler__step"></li>
+                            <li class="themes-menu__nav__toggler__step"></li>
+                            <li class="themes-menu__nav__toggler__step"></li>
                         </ul>
                     </nav>
                 </div>
             </header>
             <main class="calculator">
-                <section class="calculator__screen"></section>
-                <section class="calculator__keyboard">
-                    <!-- key-num: used to write a number on screen -->
-                    <!-- key-mod: used to modify a number on screen -->
-                    <!-- key-ope: used to operate on numbers -->
+                <output class="calculator__screen"></output>
+                <div class="calculator__keyboard">
+                    <!-- key-num: used to write numbers on screen -->
+                    <!-- key-mod: used to modify numbers on screen -->
+                    <!-- key-ope: used to write operators on screen -->
                     <!-- key-equ: equal button -->
                     <button class="calculator__keyboard__key-num">7</button>
                     <button class="calculator__keyboard__key-num">8</button>
@@ -52,7 +52,7 @@
                     <button class="calculator__keyboard__key-ope">x</button>
                     <button class="calculator__keyboard__key-mod">reset</button>
                     <button class="calculator__keyboard__key-equ">=</button>
-                </section>
+                </div>
             </main>
             <footer class="attribution">
                 Challenge by
