@@ -56,8 +56,11 @@ table {
 body {
   background-color: #3a4764;
   font-family: "Spartan", sans-serif;
+  min-height: 100vh;
+  display: flex;
 }
 body .body-contents {
+  margin: auto;
   padding: 2.1rem 1.5rem 1.8rem 1.5rem;
 }
 
@@ -180,7 +183,7 @@ header .themes-menu__nav__toggler::before {
 }
 .calculator__keyboard__key-num, .calculator__keyboard__key-del:nth-child(4) {
   width: 21.5%;
-  margin-bottom: 0.81rem;
+  margin-bottom: 4.65%;
 }
 .calculator__keyboard__key-num {
   font-size: 1.8rem;
@@ -199,6 +202,32 @@ header .themes-menu__nav__toggler::before {
 .calculator__keyboard__key-equ {
   background-color: #d03f2f;
   box-shadow: inset 0px -4px 0px 0px #93261a;
+}
+
+@media all and (min-width: 1024px) {
+  .calculator {
+    width: 33.55rem;
+  }
+  .calculator__screen {
+    height: 8rem;
+  }
+  .calculator__screen output {
+    font-size: 3rem;
+    margin: auto 2rem;
+  }
+  .calculator__keyboard {
+    padding: 1.9rem;
+  }
+  .calculator__keyboard__key-num, .calculator__keyboard__key-del, .calculator__keyboard__key-equ {
+    border-radius: 10px;
+    height: 4.05rem;
+  }
+  .calculator__keyboard__key-del, .calculator__keyboard__key-equ {
+    font-size: 1.2rem;
+  }
+  .calculator__keyboard__key-num {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=/main.07544d9b.css.map */

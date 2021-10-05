@@ -1,7 +1,10 @@
 body {
     background-color: $body-background;
     font-family: $main-font;
+    min-height: 100vh;
+    display: flex;
     .body-contents {
+        margin: auto;
         padding: 2.1rem 1.5rem 1.8rem 1.5rem;
     }
 }
