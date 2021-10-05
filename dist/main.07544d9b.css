@@ -58,7 +58,7 @@ body {
   font-family: "Spartan", sans-serif;
 }
 body .body-contents {
-  padding: 2.1rem 1.5rem 0 1.5rem;
+  padding: 2.1rem 1.5rem 1.8rem 1.5rem;
 }
 
 button {
@@ -167,10 +167,16 @@ header .themes-menu__nav__toggler::before {
   height: 4rem;
   cursor: pointer;
 }
+.calculator__keyboard__key-num:active, .calculator__keyboard__key-del:active, .calculator__keyboard__key-equ:active {
+  box-shadow: inset 0px 4px 0px 0px #232c43;
+}
 .calculator__keyboard__key-del, .calculator__keyboard__key-equ {
   width: 47.5%;
   font-size: 1rem;
   color: white;
+}
+.calculator__keyboard__key-del:active, .calculator__keyboard__key-equ:active {
+  padding: 1.7rem 0;
 }
 .calculator__keyboard__key-num, .calculator__keyboard__key-del:nth-child(4) {
   width: 21.5%;
@@ -181,6 +187,9 @@ header .themes-menu__nav__toggler::before {
   background-color: #eae3dc;
   color: #444b5a;
   box-shadow: inset 0px -4px 0px 0px #b4a597;
+}
+.calculator__keyboard__key-num:active {
+  padding: 1.25rem 0;
 }
 .calculator__keyboard__key-del {
   text-transform: uppercase;

@@ -29,11 +29,17 @@
             border-radius: 5px;
             height: 4rem;
             cursor: pointer;
+            &:active {
+                box-shadow: inset 0px 4px 0px 0px $toggle-background;
+            }
         }
         &__key-del, &__key-equ {
             width: 47.5%;
             font-size: 1rem;
             color: $text-color-2;
+            &:active {
+                padding: 1.7rem 0;
+            }
         }
         &__key-num, &__key-del:nth-child(4) {
             width: 21.5%;
@@ -44,6 +50,9 @@
             background-color: $key-num-background;
             color: $text-color-1;
             box-shadow: inset 0px -4px 0px 0px $key-num-shadow;
+            &:active {
+                padding: 1.25rem 0;
+            }
         }
         &__key-del {
             text-transform: uppercase;
