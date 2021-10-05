@@ -110,19 +110,7 @@ header .themes-menu__nav__toggler {
   width: 4.45rem;
   display: flex;
   position: relative;
-}
-header .themes-menu__nav__toggler__step {
-  height: 100%;
-  width: 33.3%;
   cursor: pointer;
-}
-header .themes-menu__nav__toggler__step:nth-child(1) {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-header .themes-menu__nav__toggler__step:nth-child(3) {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 header .themes-menu__nav__toggler::before {
   position: absolute;
@@ -131,9 +119,15 @@ header .themes-menu__nav__toggler::before {
   width: 1rem;
   background-color: #d03f2f;
   border-radius: 50%;
-  top: 0.35rem;
+  top: 0.32rem;
   left: 0.35rem;
   cursor: pointer;
+}
+header .themes-menu__nav .--active::before {
+  left: 1.675rem;
+}
+header .themes-menu__nav .--active-bis::before {
+  left: 3rem;
 }
 
 .calculator {
@@ -150,7 +144,6 @@ header .themes-menu__nav__toggler::before {
   box-sizing: border-box;
 }
 .calculator__screen__txt-field {
-  direction: rtl;
   padding: 1.9rem 1.5rem;
 }
 .calculator__screen__txt-field output {

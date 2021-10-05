@@ -1,11 +1,15 @@
+// CONSTANTS
 const output = document.querySelector("output");
 const buttons = document.querySelectorAll("button");
+const toggler = document.querySelector(".themes-menu__nav__toggler");
+const togglerBeforeStyle = window.getComputedStyle(toggler, "::before");
+
+// SET CALCULATOR BEHAVIOR
 for (let button of buttons) {
     switch (button.className) {
         case "calculator__keyboard__key-num":
             button.addEventListener("click", () => {
                 if (output.textContent.length === 11) {
-                    output.textContent = "tooMuchChar";
                 } else {
                     output.textContent += button.textContent;
                 }
@@ -30,7 +34,6 @@ for (let button of buttons) {
                 const splittedOutput = output.textContent.split("x");
                 const outputValue = eval(splittedOutput.join("*"));
                 if (outputValue.length === 11) {
-                    output.textContent = "tooMuchChar";
                 } else {
                     output.textContent = outputValue;
                 }
@@ -38,3 +41,14 @@ for (let button of buttons) {
             break;
     }
 }
+
+// TOGGLER BEHAVIOR
+toggler.addEventListener("click", () => {
+    //0.35rem = 5.6px
+    if (togglerBeforeStyle.left === "5.6px") toggler.classList.add("--active");
+    else if (togglerBeforeStyle.left === "26.8px") {
+        toggler.classList.add("--active-bis");
+        toggler.classList.remove("--active");
+    }
+    else toggler.classList.remove("--active-bis");
+})

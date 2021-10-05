@@ -124,8 +124,11 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+// CONSTANTS
 var output = document.querySelector("output");
 var buttons = document.querySelectorAll("button");
+var toggler = document.querySelector(".themes-menu__nav__toggler");
+var togglerBeforeStyle = window.getComputedStyle(toggler, "::before"); // SET CALCULATOR BEHAVIOR
 
 var _iterator = _createForOfIteratorHelper(buttons),
     _step;
@@ -137,9 +140,7 @@ try {
     switch (button.className) {
       case "calculator__keyboard__key-num":
         button.addEventListener("click", function () {
-          if (output.textContent.length === 11) {
-            output.textContent = "tooMuchChar";
-          } else {
+          if (output.textContent.length === 11) {} else {
             output.textContent += button.textContent;
           }
         });
@@ -163,9 +164,7 @@ try {
           var splittedOutput = output.textContent.split("x");
           var outputValue = eval(splittedOutput.join("*"));
 
-          if (outputValue.length === 11) {
-            output.textContent = "tooMuchChar";
-          } else {
+          if (outputValue.length === 11) {} else {
             output.textContent = outputValue;
           }
         });
@@ -175,12 +174,21 @@ try {
 
   for (_iterator.s(); !(_step = _iterator.n()).done;) {
     _loop();
-  }
+  } // TOGGLER BEHAVIOR
+
 } catch (err) {
   _iterator.e(err);
 } finally {
   _iterator.f();
 }
+
+toggler.addEventListener("click", function () {
+  //0.35rem = 5.6px
+  if (togglerBeforeStyle.left === "5.6px") toggler.classList.add("--active");else if (togglerBeforeStyle.left === "26.8px") {
+    toggler.classList.add("--active-bis");
+    toggler.classList.remove("--active");
+  } else toggler.classList.remove("--active-bis");
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -209,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35531" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42039" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

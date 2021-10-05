@@ -39,19 +39,7 @@ header {
                 width: 4.45rem;
                 display: flex;
                 position: relative;
-                &__step {
-                    height: 100%;
-                    width: 33.3%;
-                    cursor: pointer;
-                    &:nth-child(1) {
-                        border-top-left-radius: 20px;
-                        border-bottom-left-radius: 20px;
-                    }
-                    &:nth-child(3) {
-                        border-top-right-radius: 20px;
-                        border-bottom-right-radius: 20px;
-                    }
-                }
+                cursor: pointer;
                 &::before {
                     //Here is the toggler circle
                     position: absolute;
@@ -60,9 +48,19 @@ header {
                     width: 1rem;
                     background-color: $key-equ-background;
                     border-radius: 50%;
-                    top: 0.35rem;
+                    top: 0.32rem;
                     left: 0.35rem;
                     cursor: pointer;
+                }
+            }
+            .--active {
+                &::before {
+                    left: 1.675rem;
+                }
+            }
+            .--active-bis {
+                &::before {
+                    left: 3rem;
                 }
             }
         }
