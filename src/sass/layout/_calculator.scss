@@ -9,10 +9,13 @@
         height: 5.5rem;
         background-color: $screen-background;
         box-sizing: border-box;
-        output {
-            color: $text-color-2;
-            font-size: 2rem;
-            margin: auto 1.5rem;
+        &__txt-field {
+            direction: rtl;
+            padding: 1.9rem 1.5rem;
+            output {
+                color: $text-color-2;
+                font-size: 1.8rem;
+            }
         }
     }
     &__keyboard {
@@ -71,9 +74,11 @@
         width: 33.55rem;
         &__screen {
             height: 8rem;
-            output {
-                font-size: 3rem;
-                margin: auto 2rem;
+            &__txt-field {
+                padding: 9% 2rem;
+                output {
+                    font-size: 3rem;
+                }
             }
         }
         &__keyboard {

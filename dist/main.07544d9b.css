@@ -149,10 +149,13 @@ header .themes-menu__nav__toggler::before {
   background-color: #182034;
   box-sizing: border-box;
 }
-.calculator__screen output {
+.calculator__screen__txt-field {
+  direction: rtl;
+  padding: 1.9rem 1.5rem;
+}
+.calculator__screen__txt-field output {
   color: white;
-  font-size: 2rem;
-  margin: auto 1.5rem;
+  font-size: 1.8rem;
 }
 .calculator__keyboard {
   margin-top: 1.5rem;
@@ -211,9 +214,11 @@ header .themes-menu__nav__toggler::before {
   .calculator__screen {
     height: 8rem;
   }
-  .calculator__screen output {
+  .calculator__screen__txt-field {
+    padding: 9% 2rem;
+  }
+  .calculator__screen__txt-field output {
     font-size: 3rem;
-    margin: auto 2rem;
   }
   .calculator__keyboard {
     padding: 1.9rem;

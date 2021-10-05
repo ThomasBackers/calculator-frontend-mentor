@@ -4,7 +4,11 @@ for (let button of buttons) {
     switch (button.className) {
         case "calculator__keyboard__key-num":
             button.addEventListener("click", () => {
-                output.textContent += button.textContent;
+                if (output.textContent.length === 11) {
+                    output.textContent = "tooMuchChar";
+                } else {
+                    output.textContent += button.textContent;
+                }
             });
             break;
         case "calculator__keyboard__key-del":
@@ -23,7 +27,13 @@ for (let button of buttons) {
             break;
         case "calculator__keyboard__key-equ":
             button.addEventListener("click", () => {
-                output.textContent = eval(output.textContent.replace("x", "*"));
+                const splittedOutput = output.textContent.split("x");
+                const outputValue = eval(splittedOutput.join("*"));
+                if (outputValue.length === 11) {
+                    output.textContent = "tooMuchChar";
+                } else {
+                    output.textContent = outputValue;
+                }
             });
             break;
     }

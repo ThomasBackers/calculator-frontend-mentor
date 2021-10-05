@@ -137,7 +137,11 @@ try {
     switch (button.className) {
       case "calculator__keyboard__key-num":
         button.addEventListener("click", function () {
-          output.textContent += button.textContent;
+          if (output.textContent.length === 11) {
+            output.textContent = "tooMuchChar";
+          } else {
+            output.textContent += button.textContent;
+          }
         });
         break;
 
@@ -156,7 +160,14 @@ try {
 
       case "calculator__keyboard__key-equ":
         button.addEventListener("click", function () {
-          output.textContent = eval(output.textContent.replace("x", "*"));
+          var splittedOutput = output.textContent.split("x");
+          var outputValue = eval(splittedOutput.join("*"));
+
+          if (outputValue.length === 11) {
+            output.textContent = "tooMuchChar";
+          } else {
+            output.textContent = outputValue;
+          }
         });
         break;
     }
@@ -198,7 +209,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41163" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35531" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
