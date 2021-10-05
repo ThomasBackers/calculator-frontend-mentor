@@ -3,18 +3,19 @@
 $main-font: 'Spartan', sans-serif;
 
 // ---------- COLORS ----------
+/*See themes directory for details*/
 //Main
-$body-background: hsl(222, 26%, 31%);
-$text-color-1: hsl(221, 14%, 31%);
-$text-color-2: hsl(0, 0, 100%);
+$body-background: var(--body-background);
+$text-color-1: var(--text-color-1);
+$text-color-2: var(--text-color-2);
 //Toggle
-$toggle-background: hsl(223, 31%, 20%);
+$toggle-background: var(--toggle-background);
 //Screen
-$screen-background: hsl(224, 36%, 15%);
+$screen-background: var(--screen-background);
 //Keyboard
-$key-num-background: hsl(30, 25%, 89%);
-$key-num-shadow: hsl(28, 16%, 65%);
-$key-del-background: hsl(225, 21%, 49%);
-$key-del-shadow: hsl(224, 28%, 35%);
-$key-equ-background: hsl(6, 63%, 50%);
-$key-equ-shadow: hsl(6, 70%, 34%);
+$key-num-background: var(--key-num-background);
+$key-num-shadow: var(--key-num-shadow);
+$key-del-background: var(--key-del-background);
+$key-del-shadow: var(--key-del-shadow);
+$key-equ-background: var(--key-equ-background);
+$key-equ-shadow: var(--key-equ-shadow);

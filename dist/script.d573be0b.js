@@ -184,10 +184,20 @@ try {
 
 toggler.addEventListener("click", function () {
   //0.35rem = 5.6px
-  if (togglerBeforeStyle.left === "5.6px") toggler.classList.add("--active");else if (togglerBeforeStyle.left === "26.8px") {
+  if (togglerBeforeStyle.left === "5.6px") {
+    toggler.classList.add("--active");
+    document.documentElement.setAttribute("theme", "2");
+  } //1.675rem = 26.8px
+  else if (togglerBeforeStyle.left === "26.8px") {
     toggler.classList.add("--active-bis");
     toggler.classList.remove("--active");
-  } else toggler.classList.remove("--active-bis");
+    document.documentElement.setAttribute("theme", "3");
+  } else {
+    toggler.classList.remove("--active-bis");
+    document.documentElement.setAttribute("theme", "1");
+  }
+
+  ;
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

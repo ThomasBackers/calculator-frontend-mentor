@@ -1,4 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+html[theme="1"] {
+  --body-background: hsl(222, 26%, 31%);
+  --text-color-1: hsl(221, 14%, 31%);
+  --text-color-2: hsl(0, 0%, 100%);
+  --toggle-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+  --key-num-background: hsl(30, 25%, 89%);
+  --key-num-shadow: hsl(28, 16%, 65%);
+  --key-del-background: hsl(225, 21%, 49%);
+  --key-del-shadow: hsl(224, 28%, 35%);
+  --key-equ-background: hsl(6, 63%, 50%);
+  --key-equ-shadow: hsl(6, 70%, 34%);
+}
+
+html[theme="2"] {
+  --body-background: hsl(0, 0%, 90%);
+  --text-color-1: hsl(60, 10%, 19%);
+  --text-color-2: hsl(0, 0%, 100%);
+  --toggle-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+  --key-num-background: hsl(45, 7%, 89%);
+  --key-num-shadow: hsl(35, 11%, 61%);
+  --key-del-background: hsl(185, 42%, 37%);
+  --key-del-shadow: hsl(185, 58%, 25%);
+  --key-equ-background: hsl(25, 98%, 40%);
+  --key-equ-shadow: hsl(25, 99%, 27%);
+}
+
+html[theme="3"] {
+  --body-background: hsl(281, 89%, 26%);
+  --text-color-1: hsl(52, 100%, 70%);
+  --text-color-2: hsl(0, 0%, 100%);
+  --toggle-background: hsl(268, 71%, 12%);
+  --screen-background: var(--toggle-background);
+  --key-num-background: hsl(268, 47%, 21%);
+  --key-num-shadow: hsl(290, 70%, 36%);
+  --key-del-background: hsl(281, 89%, 26%);
+  --key-del-shadow: hsl(285, 91%, 52%);
+  --key-equ-background: hsl(176, 100%, 44%);
+  --key-equ-shadow: hsl(177, 92%, 70%);
+}
+
+/*See themes directory for details*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,7 +97,7 @@ table {
 }
 
 body {
-  background-color: #3a4764;
+  background-color: var(--body-background);
   font-family: "Spartan", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -71,7 +114,7 @@ button {
 header {
   display: flex;
   justify-content: space-between;
-  color: white;
+  color: var(--text-color-2);
 }
 header .calc-heading {
   font-size: 2rem;
@@ -101,10 +144,10 @@ header .themes-menu__nav__themes-list {
 }
 header .themes-menu__nav__themes-list__theme-id {
   font-size: 0.75rem;
-  cursor: pointer;
+  cursor: default;
 }
 header .themes-menu__nav__toggler {
-  background-color: #232c43;
+  background-color: var(--toggle-background);
   border-radius: 20px;
   height: 1.65rem;
   width: 4.45rem;
@@ -117,7 +160,7 @@ header .themes-menu__nav__toggler::before {
   content: "";
   height: 1rem;
   width: 1rem;
-  background-color: #d03f2f;
+  background-color: var(--key-equ-background);
   border-radius: 50%;
   top: 0.32rem;
   left: 0.35rem;
@@ -127,7 +170,7 @@ header .themes-menu__nav .--active::before {
   left: 1.675rem;
 }
 header .themes-menu__nav .--active-bis::before {
-  left: 3rem;
+  left: 3.13rem;
 }
 
 .calculator {
@@ -140,20 +183,20 @@ header .themes-menu__nav .--active-bis::before {
   display: flex;
   justify-content: flex-end;
   height: 5.5rem;
-  background-color: #182034;
+  background-color: var(--screen-background);
   box-sizing: border-box;
 }
 .calculator__screen__txt-field {
   padding: 1.9rem 1.5rem;
 }
 .calculator__screen__txt-field output {
-  color: white;
+  color: var(--text-color-2);
   font-size: 1.8rem;
 }
 .calculator__keyboard {
   margin-top: 1.5rem;
   padding: 1.5rem;
-  background-color: #232c43;
+  background-color: var(--toggle-background);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -167,12 +210,12 @@ header .themes-menu__nav .--active-bis::before {
   cursor: pointer;
 }
 .calculator__keyboard__key-num:active, .calculator__keyboard__key-del:active, .calculator__keyboard__key-equ:active {
-  box-shadow: inset 0px 4px 0px 0px #232c43;
+  box-shadow: inset 0px 4px 0px 0px var(--toggle-background);
 }
 .calculator__keyboard__key-del, .calculator__keyboard__key-equ {
   width: 47.5%;
   font-size: 1rem;
-  color: white;
+  color: var(--text-color-2);
 }
 .calculator__keyboard__key-del:active, .calculator__keyboard__key-equ:active {
   padding: 1.7rem 0;
@@ -183,21 +226,21 @@ header .themes-menu__nav .--active-bis::before {
 }
 .calculator__keyboard__key-num {
   font-size: 1.8rem;
-  background-color: #eae3dc;
-  color: #444b5a;
-  box-shadow: inset 0px -4px 0px 0px #b4a597;
+  background-color: var(--key-num-background);
+  color: var(--text-color-1);
+  box-shadow: inset 0px -4px 0px 0px var(--key-num-shadow);
 }
 .calculator__keyboard__key-num:active {
   padding: 1.25rem 0;
 }
 .calculator__keyboard__key-del {
   text-transform: uppercase;
-  background-color: #637097;
-  box-shadow: inset 0px -4px 0px 0px #404e72;
+  background-color: var(--key-del-background);
+  box-shadow: inset 0px -4px 0px 0px var(--key-del-shadow);
 }
 .calculator__keyboard__key-equ {
-  background-color: #d03f2f;
-  box-shadow: inset 0px -4px 0px 0px #93261a;
+  background-color: var(--key-equ-background);
+  box-shadow: inset 0px -4px 0px 0px var(--key-equ-shadow);
 }
 
 @media all and (min-width: 1024px) {

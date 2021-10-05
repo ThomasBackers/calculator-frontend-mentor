@@ -1,0 +1,18 @@
+html[theme="2"] {
+    // ---------- COLORS ----------
+    //Main
+    --body-background: hsl(0, 0%, 90%);
+    --text-color-1: hsl(60, 10%, 19%);
+    --text-color-2: hsl(0, 0%, 100%);
+    //Toggle
+    --toggle-background: hsl(0, 5%, 81%);
+    //Screen
+    --screen-background: hsl(0, 0%, 93%);
+    //Keyboard
+    --key-num-background: hsl(45, 7%, 89%);
+    --key-num-shadow: hsl(35, 11%, 61%);
+    --key-del-background: hsl(185, 42%, 37%);
+    --key-del-shadow: hsl(185, 58%, 25%);
+    --key-equ-background: hsl(25, 98%, 40%);
+    --key-equ-shadow: hsl(25, 99%, 27%);
+}
